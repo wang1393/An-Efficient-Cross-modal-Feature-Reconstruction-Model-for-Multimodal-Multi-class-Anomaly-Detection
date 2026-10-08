@@ -1,0 +1,17 @@
+# Install a CUDA-compatible torch/torchvision pair separately.
+# Dependency inventory from source imports; versions are not a verified paper environment.
+timm>=0.9.12,<1.0
+numpy<2
+einops
+scipy
+scikit-learn
+scikit-image
+opencv-python
+Pillow
+matplotlib
+tabulate
+tensorboardX
+fvcore
+numba
+tifffile
+adeval
