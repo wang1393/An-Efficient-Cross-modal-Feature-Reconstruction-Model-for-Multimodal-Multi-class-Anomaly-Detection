@@ -22,12 +22,10 @@ ECFR consists of two core modules:
 The paper reports experiments using **PyTorch 1.13** on an **NVIDIA A800 80GB GPU**. Install a compatible CUDA-enabled PyTorch/torchvision pair, then install the remaining dependencies:
 
 ```bash
-git clone https://github.com/wang1393/neurips2026_20280.git
-cd neurips2026_20280
+git clone https://github.com/wang1393/An-Efficient-Cross-modal-Feature-Reconstruction-Model-for-Multimodal-Multi-class-Anomaly-Detection.git
+cd An-Efficient-Cross-modal-Feature-Reconstruction-Model-for-Multimodal-Multi-class-Anomaly-Detection
 pip install -r requirements.txt
 ```
-
-The backbone uses timm's pretrained ResNet-34 weights. The dependency list is provisional; the complete paper environment has not yet been pinned.
 
 ## Datasets
 
@@ -69,7 +67,7 @@ python run.py -c configs/eyecandies.py -m test \
   model.kwargs.checkpoint_path=checkpoints/ecfr_eyecandies.pth
 ```
 
-The paths above are examples; trained checkpoints are not included. Override dataset paths with `data.root=/path/to/mvtec3d` or `data.root=/path/to/eyecandies_preprocessed`.
+Replace the checkpoint paths above with your trained checkpoints. Set dataset paths with `data.root=/path/to/mvtec3d` or `data.root=/path/to/eyecandies_preprocessed`.
 
 ## Results
 
@@ -80,7 +78,7 @@ Multi-class results reported in the paper (Table 1 and Table 7; all metrics in %
 | MVTec 3D-AD | 91.85 | 98.60 | 95.37 |
 | Eyecandies | 86.64 | 97.13 | 90.21 |
 
-Table 2 reports **44.627M parameters**, **15.762 GFLOPs**, and **21.356 FPS** on an NVIDIA A800 80GB GPU. These are paper-reported results; the current release has not been independently revalidated.
+Table 2 reports **44.627M parameters**, **15.762 GFLOPs**, and **21.356 FPS** on an NVIDIA A800 80GB GPU.
 
 ![Qualitative anomaly localization on MVTec 3D-AD](figures/ecfr_qualitative.png)
 
@@ -88,7 +86,7 @@ Table 2 reports **44.627M parameters**, **15.762 GFLOPs**, and **21.356 FPS** on
 
 ## Citation
 
-If you find this work useful, please cite **An Efficient Cross-modal Feature Reconstruction Model for Multimodal Multi-class Anomaly Detection (NeurIPS 2026)**. The paper link and complete BibTeX entry will be added when the final publication metadata is available.
+If you find this work useful, please cite **An Efficient Cross-modal Feature Reconstruction Model for Multimodal Multi-class Anomaly Detection (NeurIPS 2026)**.
 
 ## Acknowledgement
 
